@@ -7,6 +7,8 @@ import Bg from "../../assets/bg.svg";
 import Button from "../../components/Button/index";
 import "./styles.css";
 import { Link } from "react-router-dom";
+import * as Yup from 'yup';
+
 
 function initialState() {
   return {
@@ -38,7 +40,7 @@ const UserRegister = () => {
         <div className="login-content">
           <form>
             <img src={Avatar} />
-            <h2 className="title">Welcome</h2>
+            <h2 className="title">Cadastro</h2>
             <div className="input-div one">
               <div class="i">
                 <i className="fas fa-user"></i>
@@ -64,7 +66,7 @@ const UserRegister = () => {
                   id="password"
                   type="password"
                   name="password"
-                  placeholder="password"
+                  placeholder="senha"
                   value={values.password}
                   onChange={onChange}
                 />
