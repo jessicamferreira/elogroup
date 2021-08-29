@@ -4,6 +4,7 @@ import UserLogin from "./pages/Login";
 import StoreProvider from './store/Provider';
 import StoreContext from './store/Context';
 import UserRegister from "./pages/Login/register";
+import Leads from "./pages/Leads";
 
 const RoutesPrivate = ({ component: Component, ...rest}) => {
   const { token } = useContext(StoreContext);
@@ -24,7 +25,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/login" component={UserLogin} />
       <Route exact path="/register" component={UserRegister} />
-      <RoutesPrivate path="/" component={() => <h1>Home</h1>} />
+      <RoutesPrivate path="/" component={Leads} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
     </StoreProvider>
